@@ -1,3 +1,6 @@
+AutoBin
+--
+
 ### About This Project
 Automated recycling/garbage bin that sorts items into its respective waste categories. Uses the Microsoft Computer Vision API.
 
