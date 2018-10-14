@@ -7,8 +7,11 @@ Automated recycling/garbage bin that sorts items into its respective waste categ
 ### Features
 TODO
 
+### Setup Guide
+Install the repo and then rename `API KEY GOES HERE.ini` to `config.ini`. Put your Microsoft Computer Vision API key from mashape under the `key` property.
+
 ### Libraries
-#### [Rapidconnect](https://rapidapi.com/)
+#### [Requests](http://docs.python-requests.org/en/master/)
 * **Used for:** Microsoft Computer Vision API calls
 
 #### [Kivy](https://kivy.org/)
