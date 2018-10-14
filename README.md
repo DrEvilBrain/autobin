@@ -12,6 +12,11 @@ Install the repo and then rename `API KEY GOES HERE.ini` to `config.ini`. Put yo
 
 ### Libraries
 #### [Requests](http://docs.python-requests.org/en/master/)
+
+> The Apache 2.0 License
+>
+> Copyright (c) 2018 Kenneth Reitz
+
 * **Used for:** Microsoft Computer Vision API calls
 
 #### [Kivy](https://kivy.org/)
