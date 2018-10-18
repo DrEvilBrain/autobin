@@ -10,9 +10,6 @@ cans
 metal
 jars
 bottle
-drinking water
-water
-juice
 glass
 plastic
 jugs
