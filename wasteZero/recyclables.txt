@@ -39,7 +39,6 @@ cdrom
 case
 cup
 container
-container
 clamshell
 cork
 plate
@@ -56,4 +55,3 @@ carton
 envelope
 phonebook
 sticky note
-
