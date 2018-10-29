@@ -60,12 +60,16 @@ print("Captions: ", caption)
 # output a number describing how accurate the phase is
 print("Confidence: ", confidence)
 
+# check tags to see which bin the item should go to
 for i in range(len(tags)):
-	if tags[i] in compost:
-		print("THIS ITEM GOES TO THE COMPOST BIN.")
-	elif tags[i] in recycable:
+	if tags[i] in recycable:
 		print("THIS ITEM GOES TO THE RECYCLING BIN.")
+		break
+	elif tags[i] in compost:
+		print("THIS ITEM GOES TO THE COMPOST BIN.")
+		break
 	elif tags[i] in landfill:
 		print("THIS ITEM GOES TO THE LANDFILL BIN.")
-	if i == len(tags):
+		break
+	if i == len(tags)-1:
 		print("THIS ITEM GOES TO THE LANDFILL BIN.")
