@@ -54,7 +54,6 @@ office
 carton
 envelope
 phonebook
-<<<<<<< HEAD
 sticky note
 fork
 spoon
@@ -64,6 +63,4 @@ milk cartoon
 paper cup
 paper towel
 pizza box
-=======
 sticky note
->>>>>>> 06e66bf288621732f0a1360c602e49b063bad866
