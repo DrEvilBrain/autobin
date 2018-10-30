@@ -32,3 +32,4 @@ sponge
 styrofoam
 twist tile
 wood
+food

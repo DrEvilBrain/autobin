@@ -32,12 +32,7 @@ paper napkin
 napkin
 tissue
 tissues
-juice cartoon
-milk cartoon
 towel
-paper cup
-paper towel
-pizza box
 Paper bag
 paper ice cream container
 paper carton
@@ -118,7 +113,6 @@ sheet
 Bill
 Envelope
 Pencil shaving
-Sticky note
 shredded
 business card
 vacuum cleaner bag

@@ -56,4 +56,11 @@ carton
 envelope
 phonebook
 sticky note
-
+fork
+spoon
+knife
+juice cartoon
+milk cartoon
+paper cup
+paper towel
+pizza box
