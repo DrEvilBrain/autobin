@@ -28,7 +28,7 @@ else:
 		print("Confidence: ", confidence)
 
 		# sort image by the image's tags given from the API
-		sortImage(tags)
+		print(sortImage(tags))
 	else:
 		# output response status code for debugging purposes
 		print("Response Status Code: ", status_code)
