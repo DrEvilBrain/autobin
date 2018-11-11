@@ -2,7 +2,13 @@ import requests
 from configparser import ConfigParser
 import os
 
-def apiCall(image):
+'''
+Performs a Microsoft Computer Vision API call
+
+Keyword argument:
+image -- URL or file to perform image recognition on
+'''
+def apiCall(image=None):
 	# grabs current file directory
 	curr_dir = os.path.dirname(__file__)
 
@@ -13,6 +19,8 @@ def apiCall(image):
 	
 	# checks to use URL or locally stored image as determined by config file
 	imageIsURL = config.getboolean("DEBUG", "use_url")
+	
+	# perform API call by passing a URL
 	if(imageIsURL):
 		# use image URL to call Microsoft Computer Vision API from mashape
 		response = requests.post("https://microsoft-azure-microsoft-computer-vision-v1.p.mashape.com/describe",
@@ -25,8 +33,9 @@ def apiCall(image):
 				{"url": image}
 			)
 		)
+	# perform API call by passing an image
 	else:
-		# open image
+		# open image to do image recognition on
 		with open(image, mode="rb") as f:
 			img_data = f.read()
 	
@@ -41,9 +50,7 @@ def apiCall(image):
 		)
 	
 	status_code = response.status_code
-	print(status_code)
 	json = response.json()
-	print(json)
 	tags = json["description"]["tags"]
 	caption = json["description"]["captions"][0]["text"]
 	confidence = json["description"]["captions"][0]["confidence"]
