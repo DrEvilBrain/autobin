@@ -1,5 +1,11 @@
 from api import apiCall
 from sortImage import sortImage
+import os
+from io import BytesIO
+
+curr_dir = os.path.dirname(__file__)
+# image to do image recognition on
+image = curr_dir + "/waterBottle.png"
 
 # image url to do image recognition on (input as string)
 url = "https://upload.wikimedia.org/wikipedia/commons/e/eb/Box.agr.jpg"
@@ -11,7 +17,7 @@ elif not(isinstance(url, str)):
 	print("URL is not a string")
 else:
 	# makes apiCall and fetches formated data from it
-	status_code, json, tags, caption, confidence = apiCall(url)
+	status_code, json, tags, caption, confidence = apiCall(image)
 
 	# checks if API response status code is 200 (valid response)
 	if(status_code == 200):
