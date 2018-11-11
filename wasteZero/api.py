@@ -12,26 +12,38 @@ def apiCall(image):
 	API_KEY = config.get("API", "key")
 	
 	# checks to use URL or locally stored image as determined by config file
-	imageIsURL = config.get("DEBUG", "use_url")
+	imageIsURL = config.getboolean("DEBUG", "use_url")
 	if(imageIsURL):
-		# use image URL to make call
-		json = ({'url': image})
+		# use image URL to call Microsoft Computer Vision API from mashape
+		response = requests.post("https://microsoft-azure-microsoft-computer-vision-v1.p.mashape.com/describe",
+			headers={
+				"X-Mashape-Key": API_KEY,
+				"Content-Type": "application/json",
+				"Accept": "application/json"
+			},
+			json=(
+				{"url": image}
+			)
+		)
 	else:
-		# use stored image to make call
-		json = image
-
-	# calls Microsoft Computer Vision API from mashape
-	response = requests.post("https://microsoft-azure-microsoft-computer-vision-v1.p.mashape.com/describe",
-		headers = {
-			"X-Mashape-Key": API_KEY,
-			"Content-Type": "application/json",
-			"Accept": "application/json"
-		},
-		json = json
-	)
+		# open image
+		with open(image, mode="rb") as f:
+			img_data = f.read()
+	
+		# use stored image to call Microsoft Computer Vision API from mashape
+		response = requests.post("https://microsoft-azure-microsoft-computer-vision-v1.p.mashape.com/describe",
+			headers={
+				"X-Mashape-Key": API_KEY,
+				"Content-Type": "application/octet-stream",
+				"Accept": "application/json"
+			},
+			data=img_data
+		)
 	
 	status_code = response.status_code
+	print(status_code)
 	json = response.json()
+	print(json)
 	tags = json["description"]["tags"]
 	caption = json["description"]["captions"][0]["text"]
 	confidence = json["description"]["captions"][0]["confidence"]

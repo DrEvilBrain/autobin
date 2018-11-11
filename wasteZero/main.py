@@ -1,7 +1,6 @@
 from api import apiCall
 from sortImage import sortImage
 import os
-from io import BytesIO
 
 curr_dir = os.path.dirname(__file__)
 # image to do image recognition on
