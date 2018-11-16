@@ -4,10 +4,10 @@ import os
 
 # locally saved image file to do image recongition on
 curr_dir = os.path.dirname(__file__)
-image = curr_dir + "/waterBottle.png"
+image = curr_dir + "/image.jpg"
 
 # image url to do image recognition on (input as string)
-# image = "https://upload.wikimedia.org/wikipedia/commons/e/eb/Box.agr.jpg"
+# image = ""
 
 # makes apiCall and fetches formated data from it
 status_code, json, tags, caption, confidence = apiCall(image)

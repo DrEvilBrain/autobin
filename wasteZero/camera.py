@@ -2,12 +2,9 @@ from time import sleep
 from picamera import PiCamera
 
 def takePicture():
-	# Explicitly open a new file called my_image.jpg
-	pic = open('my_image.jpg', 'wb')
 	camera = PiCamera()
+	camera.resolution = (1024, 768)
 	camera.start_preview()
+	# camera warm-up time
 	sleep(2)
-	camera.capture(my_file)
-	# At this point my_file.flush() has been called, but the file has
-	# not yet been closed
-	pic.close()
+	camera.capture("image.jpg")
