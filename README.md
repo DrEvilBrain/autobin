@@ -4,9 +4,6 @@ AutoBin
 ### About This Project
 Automated recycling/garbage bin that sorts items into its respective waste categories. Uses the Microsoft Computer Vision API.
 
-### Features
-TODO
-
 ### Setup Guide
 Install the repo and then rename `API KEY GOES HERE.ini` to `config.ini`. Put your Microsoft Computer Vision API key from mashape under the `key` property.
 
