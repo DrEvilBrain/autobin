@@ -21,5 +21,6 @@ def sortImage(imageTags):
 			return("THIS ITEM GOES TO THE RECYCLING BIN.")
 		elif imageTags[i] in landfill:
 			return("THIS ITEM GOES TO THE LANDFILL BIN.")
+		# default to landfill bin if none of the tags match
 		if i == len(imageTags)-1:
 			return("THIS ITEM GOES TO THE LANDFILL BIN.")

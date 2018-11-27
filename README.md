@@ -19,15 +19,6 @@ Install the repo and then rename `API KEY GOES HERE.ini` to `config.ini`. Put yo
 
 * **Used for:** Microsoft Computer Vision API calls
 
-#### [Kivy](https://kivy.org/)
-
-> The MIT License (MIT)
->
-> Copyright (c) 2010-2018 Kivy Team and other contributors
-
-* **Used for:** Front-end application
-* **License:** The MIT License (MIT)
-
 ### Credits
 * [Pedram26](https://github.com/Pedram26): Original application
 * [mahikajain3](https://github.com/mahikajain3): Additional engineering
