@@ -1,6 +1,7 @@
 # Project specific files
 wasteZero/config\.ini
 wasteZero/API KEY GOES HERE\.ini
+wasteZero/image\.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
