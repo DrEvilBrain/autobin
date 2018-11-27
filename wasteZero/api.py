@@ -49,6 +49,7 @@ def apiCall(image=None):
 			data=img_data
 		)
 	
+	# debug output
 	status_code = response.status_code
 	json = response.json()
 	tags = json["description"]["tags"]
